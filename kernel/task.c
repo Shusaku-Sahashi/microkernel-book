@@ -148,7 +148,7 @@ task_t task_create(const char *name, uaddr_t ip, struct task *pager) {
     error_t err = init_task_struct(task, tid, name, ip, pager, 0, NULL);
     if (err != OK) {
         return err;
-    }
+    j
 
     list_push_back(&active_tasks, &task->next);
     task_resume(task);

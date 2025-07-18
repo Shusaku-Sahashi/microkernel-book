@@ -48,8 +48,8 @@ struct list {
     struct list *next;  // 先頭 (list_t) または 次のエントリ (list_elem_t)
 };
 
-typedef struct list list_t;       // リスト
-typedef struct list list_elem_t;  // リストのエントリ
+typedef struct list list_t;       // リスト(番兵ノード)
+typedef struct list list_elem_t;  // リストのエントリ(要素のノード)
 
 void list_init(list_t *list);
 void list_elem_init(list_elem_t *elem);

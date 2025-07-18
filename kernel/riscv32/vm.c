@@ -142,7 +142,7 @@ void arch_vm_destroy(struct arch_vm *vm) {
     // 仮想アドレスを走査して、ユーザ空間のページを解放する
     uint32_t *l1table = (uint32_t *) arch_paddr_to_vaddr(vm->table);
     for (int i = 0; i < 512; i++) {
-        uint32_t pte1 = l1table[i];
+        uint32_t pte1 = l1table[i]ni;
         // エントリが設定されていなければスキップ
         if (!(pte1 & PTE_V)) {
             continue;
